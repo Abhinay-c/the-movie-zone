@@ -18,7 +18,7 @@ export class SearchPage {
   constructor(private router: Router) {}
 
 
-  onSearch(form: NgForm): void {
+  onSubmit(form: NgForm): void {
     if(!form.valid) {
       alert('Form is invalid');
       return;

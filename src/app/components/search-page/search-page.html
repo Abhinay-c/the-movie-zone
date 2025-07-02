@@ -11,7 +11,7 @@
         <option value="type-id">IMDB ID</option>
     </select>
 
-    <form class="search-page-form" #form="ngForm" (ngSubmit)="onSearch(form)">
+    <form class="search-page-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
         <input 
             *ngIf="searchType === 'type-title'"
             type="text" 
