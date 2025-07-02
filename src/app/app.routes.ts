@@ -8,7 +8,7 @@ export const routes: Routes = [
         component: SearchPage
     },
     {
-        path: 'details',
+        path: 'details/:title/:id',
         component: Details
     }
 ];

@@ -12,36 +12,25 @@ import { CommonModule } from '@angular/common';
 export class SearchPage {
 
   searchType: string = 'type-title';
-  searchTerm: string = '';
+  searchTitle: string = '';
+  searchID: string ='';
 
   constructor(private router: Router) {}
 
 
   onSearch(form: NgForm): void {
     if(!form.valid) {
-      console.error('Form is invalid');
+      alert('Form is invalid');
+      return;
     }
-    else if(this.searchType === 'type-title') {
-      this.searchTerm = form.value.title;
-      if (this.searchTerm) {
-        console.log('Searching for title:', this.searchTerm);
-        form.reset();
-        this.router.navigate(['details']);
-      } else {
-        console.error('Search title is required');
-      }
+    this.searchTitle = form.value.title;
+    this.searchID = form.value.imdbId;
+    if(this.searchTitle == '' && this.searchID == '') {
+      alert("Invalid Input");
+      return;
     }
-    else if (this.searchType === 'type-id') {
-      this.searchTerm = form.value.imdbId;
-      if (this.searchTerm) {
-        console.log('Searching for id:', this.searchTerm);
-        form.reset();
-        this.router.navigate(['details']);
-      } else {
-        console.error('Search id is required');
-      }
-    }
-    // this.router.navigate(['search', searchTerm]);
+    this.router.navigate(['/details', "this.searchTitle", "this.searchID"]);
+    form.reset();
   }
 
 }
