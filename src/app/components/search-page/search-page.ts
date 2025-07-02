@@ -26,6 +26,7 @@ export class SearchPage {
       if (this.searchTerm) {
         console.log('Searching for title:', this.searchTerm);
         form.reset();
+        this.router.navigate(['details']);
       } else {
         console.error('Search title is required');
       }
@@ -35,6 +36,7 @@ export class SearchPage {
       if (this.searchTerm) {
         console.log('Searching for id:', this.searchTerm);
         form.reset();
+        this.router.navigate(['details']);
       } else {
         console.error('Search id is required');
       }
