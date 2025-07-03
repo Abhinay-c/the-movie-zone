@@ -23,13 +23,14 @@ export class SearchPage {
       alert('Form is invalid');
       return;
     }
-    this.searchTitle = form.value.title;
-    this.searchID = form.value.imdbId;
-    if(this.searchTitle == '' && this.searchID == '') {
-      alert("Invalid Input");
+    this.searchTitle = form.value.title || '';
+    this.searchID = form.value.imdbId || '';
+    console.log('Using title:',  this.searchTitle, 'Using id:', this.searchID);
+    if(this.searchTitle === '' && this.searchID === '') {
+      alert("Please enter valid input");
       return;
     }
-    this.router.navigate(['/details', "this.searchTitle", "this.searchID"]);
+    this.router.navigate(['details', this.searchTitle || 'none', this.searchID || 'none']);
     form.reset();
   }
 

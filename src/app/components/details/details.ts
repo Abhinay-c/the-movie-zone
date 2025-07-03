@@ -24,8 +24,11 @@ export class Details implements OnInit, OnDestroy{
 
   ngOnInit(): void {
       this.routerSub = this.activatedRoute.params.subscribe((params: Params) => {
-        if(params['t'] != '' || params['i'] != '')  {
-          this.searchMovie(params['t'], params['i']);
+        const titleParam = params['title'] === 'none' ? '' : params['title'];
+        const idParam = params['id'] === 'none' ? '' : params['id'];
+        console.log('Using title:', titleParam, 'Using id:', idParam);
+        if(titleParam || idParam)  {
+          this.searchMovie(titleParam, idParam);
         }
       });
   }

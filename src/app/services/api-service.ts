@@ -16,7 +16,7 @@ export class ApiService {
     id: string
   ): Observable<Movie> {
     let params = new HttpParams().set(`apikey`,env.API_KEY).set(`t`,title).set('i',id);
-    return this.http.get<Movie>(`$(env.BASE_URL)`,{params: params});
+    return this.http.get<Movie>(`${env.BASE_URL}`,{params: params});
   }
 
 }
