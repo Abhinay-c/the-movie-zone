@@ -1,0 +1,22 @@
+.details {
+    display: flex;         
+    height: 90vh;   
+
+    &-image{
+        flex: 1;
+        padding: 16px;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        width: 100%;
+    }
+    &-text{
+        flex: 2;
+        padding: 16px;
+        box-sizing: border-box;
+        background-color: #d0d0d0; 
+    }
+}

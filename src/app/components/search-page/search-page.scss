@@ -1,180 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-.search-page{
-    margin: 1rem;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    white-space: wrap;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono");
 
-    &-header{
-        align-items: center;
-        width: 40rem;
-        height: 40rem;
+$bg-dark: #353831;
+$bg-medium: #38423b;
+$bg-input: #3f5e5a;
+$accent: #20fc8f;
+$hover-accent: #a4c3b2;
+$text-light: #ffffff;
+$text-dark: #2d2d2a;
+$shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
+
+.search-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem;
+
+    &-header {
+        background-color: $bg-dark;
+        color: $text-light;
+        width: clamp(300px, 40%, 500px);
+        aspect-ratio: 1 / 1;
         display: flex;
+        align-items: center;
         justify-content: center;
-        background-color: #353831;
-        color: white;
-        h1{
-            width: 40rem;
-            text-align: center;
-            font-weight: 1000;
-            font-size: 5rem;
+        text-align: center;
+        border-radius: 1rem;
+        // box-shadow: $shadow;
+
+        h1 {
+            font-family: "Roboto Mono", monospace;
+            font-weight: 800;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            padding: 1rem;
             text-transform: uppercase;
-            font-family: 'Roboto Mono';
         }
     }
-    &-input{
-        border-radius: 1.5rem;
-        align-items: stretch;
-        flex-direction: column;
-        width: 40rem;
-        height: 40rem;
-        display: flex;
-        justify-content: center;
-        background-color: #38423B;
-        color: white;
-        overflow: hidden;
-        box-shadow: 10px 5px 5px #2D2D2A;
 
-        &-subtitle{
-            width: 40rem;
+    &-input {
+        background-color: $bg-medium;
+        color: $text-light;
+        width: clamp(500px, 40%, 500px);
+        aspect-ratio: 1 / 1;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        &-subtitle {
+            font-family: "Roboto Mono", monospace;
+            font-weight: 600;
+            font-size: 1.2rem;
             text-align: center;
-            font-weight: 800;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            font-family: 'Roboto Mono';
-            background-color: #38423B;
+            padding: 1rem;
+            background-color: $bg-medium;
         }
 
-        &-type{
-            margin: 1rem;
-            width: 40rem;
+        &-type {
             display: flex;
             align-items: center;
-            justify-content: center;
-            background-color: #38423B;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            background-color: $bg-medium;
 
-            label{  
-                margin: 1rem;
-                font-family: 'Roboto Mono';
+            label, select {
+                font-family: "Roboto Mono", monospace;
                 font-size: 1rem;
-                background-color: #38423B;
+                background-color: $bg-medium;
             }
-            select{
-                margin: 1rem;
-                font-family: 'Roboto Mono';
-                font-size: 1rem;
-                background-color: #38423B;
-            }
-            option{
-                margin: 1rem;
-                font-family: 'Roboto Mono';
-                font-size: 1rem;
-                background-color: #fff;
-            }
-            select, ::picker(select) {
-                appearance: base-select;
+
+            select {
+                background-color: $bg-medium;
+                color: $text-light;
+                border: 1px solid $accent;
+                border-radius: 0.5rem;
+                padding: 0.25rem 0.5rem;
+                cursor: pointer;
+
+                &:focus {
+                    outline: 2px solid $accent;
+                }
             }
         }
-        
-        &-form{
-            margin: 1rem;
-            font-size: 1rem;
-            justify-content: center;
-            display: flex;
-            background-color: #38423B;
-            form{
-                background-color: #38423B;
-                input{
-                    font-family: 'Roboto Mono';
-                    padding: 0.35rem;
+
+        &-form {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                background-color: $bg-medium;
+
+                input {
+                    font-family: "Roboto Mono", monospace;
                     font-size: 1rem;
-                    border-radius: 0.25em;
-                    // border: outset #a370f0;
-                    background-color: #3F5E5A;
-                    color: white;
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    background-color: $bg-input;
+                    color: $text-light;
+                    width: 80%;
+
+                    &:focus {
+                        outline: 2px solid $accent;
+                        background-color: darken($bg-input, 5%);
+                    }
                 }
-                input:focus{
-                    border-color: #20FC8F;
-                }
-                button{
+
+                button {
+                    font-family: "Roboto Mono", monospace;
+                    font-weight: 700;
                     font-size: 1rem;
-                    font-family: 'Roboto Mono';
-                    // background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-                    background-color: #20FC8F;
-                    box-shadow: rgba(151, 65, 252, 0.2) 0 1rem 2rem -0.3rem;
-                    color: #2D2D2A;
-                    font-weight: 800;
-                    padding: 0.35rem;
-                    border-radius: 0.5em;
-                    margin: 0 1rem 0 1rem;
+                    background-color: $accent;
+                    color: $text-dark;
+                    border: none;
+                    border-radius: 0.5rem;
+                    padding: 0.5rem 1.5rem;
                     cursor: pointer;
-                    transition: all 0.1s;
+                    transition: background-color 0.2s, transform 0.1s;
+
+                    &:hover {
+                        background-color: $hover-accent;
+                        transform: translateY(-2px);
+                    }
+
+                    &:active {
+                        transform: scale(0.98);
+                    }
                 }
-                button:hover{
-                    color: #2D2D2A;
-                    background: #A4C3B2;
-                    border-width: 0.1rem;
-                    font-weight: 800;
-                    border-color: #CCE3DE;
-                }
-                // button{
-                //     margin: 1rem;   
-                //     align-items: center;
-                //     background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-                //     border: 0;
-                //     border-radius: 0.5rem;
-                //     box-shadow: rgba(151, 65, 252, 0.2) 0 1rem 2rem -0.3rem;
-                //     box-sizing: border-box;
-                //     color: #ffffff;
-                //     // display: flex;
-                //     font-size: 1rem;
-                //     // justify-content: center;
-                //     line-height: 1em;
-                //     padding: 0.5rem;
-                //     text-decoration: none;
-                //     user-select: none;
-                //     -webkit-user-select: none;
-                //     touch-action: manipulation;
-                //     white-space: nowrap;
-                //     cursor: pointer;
-                //     transition: all 0.3s;
-                // }
-                // button:active, button:hover {
-                //     outline: 0;
-                // }
-                // button span{
-                //     background-color: rgb(5, 6, 45);
-                //     padding: 0.4rem 1rem;
-                //     border-radius: 6px;         
-                //     transition: 300ms;
-                // }
-                // button:hover span {
-                //     background: none;
-                // }
-                
-                // button:active {
-                //     transform: scale(0.9);
-                // }
             }
         }
-
     }
 }
 
-@media screen and (max-width: 1240px) {
-    .search-page{
+@media (max-width: 768px) {
+    .search-page {
         flex-direction: column;
-        &-header{
-            height: 15rem;
-            margin: 5rem;
-        }
-        &-input{
-            align-items: stretch;
-            justify-content: center;
-            height: 15rem;
+
+        &-header,
+        &-input {
+            width: 90%;
+            aspect-ratio: unset;
+            height: auto;
         }
     }
 }
