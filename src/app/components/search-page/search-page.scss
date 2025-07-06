@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 .search-page{
     margin: 1rem;
     padding: 0px;
@@ -15,6 +14,8 @@
         height: 40rem;
         display: flex;
         justify-content: center;
+        background-color: #353831;
+        color: white;
         h1{
             width: 40rem;
             text-align: center;
@@ -25,12 +26,17 @@
         }
     }
     &-input{
+        border-radius: 1.5rem;
         align-items: stretch;
         flex-direction: column;
         width: 40rem;
         height: 40rem;
         display: flex;
         justify-content: center;
+        background-color: #38423B;
+        color: white;
+        overflow: hidden;
+        box-shadow: 10px 5px 5px #2D2D2A;
 
         &-subtitle{
             width: 40rem;
@@ -39,6 +45,7 @@
             font-size: 1.5rem;
             text-transform: uppercase;
             font-family: 'Roboto Mono';
+            background-color: #38423B;
         }
 
         &-type{
@@ -47,16 +54,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #38423B;
 
             label{  
                 margin: 1rem;
                 font-family: 'Roboto Mono';
                 font-size: 1rem;
+                background-color: #38423B;
             }
-            select, option{
+            select{
                 margin: 1rem;
                 font-family: 'Roboto Mono';
                 font-size: 1rem;
+                background-color: #38423B;
+            }
+            option{
+                margin: 1rem;
+                font-family: 'Roboto Mono';
+                font-size: 1rem;
+                background-color: #fff;
             }
             select, ::picker(select) {
                 appearance: base-select;
@@ -68,20 +84,29 @@
             font-size: 1rem;
             justify-content: center;
             display: flex;
+            background-color: #38423B;
             form{
+                background-color: #38423B;
                 input{
                     font-family: 'Roboto Mono';
                     padding: 0.35rem;
                     font-size: 1rem;
-                    border-radius: 0.5em;
-                    border: outset #a370f0;
+                    border-radius: 0.25em;
+                    // border: outset #a370f0;
+                    background-color: #3F5E5A;
+                    color: white;
+                }
+                input:focus{
+                    border-color: #20FC8F;
                 }
                 button{
                     font-size: 1rem;
                     font-family: 'Roboto Mono';
-                    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+                    // background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+                    background-color: #20FC8F;
                     box-shadow: rgba(151, 65, 252, 0.2) 0 1rem 2rem -0.3rem;
-                    color: white;
+                    color: #2D2D2A;
+                    font-weight: 800;
                     padding: 0.35rem;
                     border-radius: 0.5em;
                     margin: 0 1rem 0 1rem;
@@ -89,11 +114,11 @@
                     transition: all 0.1s;
                 }
                 button:hover{
-                    color: #a370f0;
-                    background: white;
+                    color: #2D2D2A;
+                    background: #A4C3B2;
                     border-width: 0.1rem;
                     font-weight: 800;
-                    border-color: #a370f0;
+                    border-color: #CCE3DE;
                 }
                 // button{
                 //     margin: 1rem;   
