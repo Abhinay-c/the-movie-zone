@@ -1,36 +1,33 @@
-body{
-    margin: 0px;
-    padding: 0px; 
-    outline: none;
-    border: 0px;
-}
-
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 60px;
+    justify-content: space-between;
     background-color: var(--bg);
+    position: relative;
     color: white;
-    margin: -10px;
+    padding: 0 1rem 0 1rem;
     &-logo{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--bg);
-        
+        margin: 0;
+        padding: 0rem;
+        p{
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     }
-    &-logo-img{
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
+    &-toggle{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; // places toggle to the right if in a navbar
+        padding: 0 1rem;
+        &-switch{
+            display: flex;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
     }
-}
-
-.text{
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 10px;
-    background-color: var(--bg);
 }
