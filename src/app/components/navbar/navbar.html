@@ -7,4 +7,9 @@
         >
         <p class="text">The Movie Zone</p>
     </div>
+    <div class="toggle">
+        <div>
+            <ui-switch [(ngModel)]="isDark" (change)="toggleTheme()">Change Theme</ui-switch>
+        </div>
+    </div>
 </div>

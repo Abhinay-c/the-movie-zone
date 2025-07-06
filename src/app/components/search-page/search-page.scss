@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono");
 
-$bg-dark: #353831;
-$bg-medium: #38423b;
-$bg-input: #3f5e5a;
-$accent: #20fc8f;
-$hover-accent: #a4c3b2;
-$text-light: #ffffff;
-$text-dark: #2d2d2a;
-$shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
-
 .search-page {
     display: flex;
     justify-content: center;
@@ -19,8 +10,8 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
     margin: 2rem;
 
     &-header {
-        background-color: $bg-dark;
-        color: $text-light;
+        background-color: var(--bg-primary);
+        color: var(--text);
         width: clamp(300px, 40%, 500px);
         aspect-ratio: 1 / 1;
         display: flex;
@@ -28,7 +19,6 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
         justify-content: center;
         text-align: center;
         border-radius: 1rem;
-        // box-shadow: $shadow;
 
         h1 {
             font-family: "Roboto Mono", monospace;
@@ -40,12 +30,12 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
     }
 
     &-input {
-        background-color: $bg-medium;
-        color: $text-light;
+        background-color: var(--bg-secondary);
+        color: var(--text);
         width: clamp(500px, 40%, 500px);
         aspect-ratio: 1 / 1;
         border-radius: 1rem;
-        box-shadow: $shadow;
+        box-shadow: var(--shadow);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -58,7 +48,7 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
             font-size: 1.2rem;
             text-align: center;
             padding: 1rem;
-            background-color: $bg-medium;
+            background-color: var(--bg-secondary);
         }
 
         &-type {
@@ -66,24 +56,24 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
             align-items: center;
             gap: 0.5rem;
             margin: 1rem 0;
-            background-color: $bg-medium;
+            background-color: var(--bg-secondary);
 
             label, select {
                 font-family: "Roboto Mono", monospace;
                 font-size: 1rem;
-                background-color: $bg-medium;
+                background-color: var(--bg-secondary);
             }
 
             select {
-                background-color: $bg-medium;
-                color: $text-light;
-                border: 1px solid $accent;
+                background-color: var(--bg-secondary);
+                color: var(--text);
+                border: 1px solid var(--accent);
                 border-radius: 0.5rem;
                 padding: 0.25rem 0.5rem;
                 cursor: pointer;
 
                 &:focus {
-                    outline: 2px solid $accent;
+                    outline: 2px solid var(--accent);
                 }
             }
         }
@@ -94,7 +84,7 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
-                background-color: $bg-medium;
+                background-color: var(--bg-secondary);
 
                 input {
                     font-family: "Roboto Mono", monospace;
@@ -102,13 +92,14 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
                     padding: 0.5rem 1rem;
                     border: none;
                     border-radius: 0.5rem;
-                    background-color: $bg-input;
-                    color: $text-light;
+                    background-color: var(--bg-tertiary);
+                    color: var(--text);
                     width: 80%;
 
                     &:focus {
-                        outline: 2px solid $accent;
-                        background-color: darken($bg-input, 5%);
+                        outline: 2px solid var(--accent);
+                        // background-color: darken(var(--bg-tertiary), 5%);
+                        background-color: var(--bg-tertiary);
                     }
                 }
 
@@ -116,8 +107,8 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
                     font-family: "Roboto Mono", monospace;
                     font-weight: 700;
                     font-size: 1rem;
-                    background-color: $accent;
-                    color: $text-dark;
+                    background-color: var(--accent);
+                    color: var(--text);
                     border: none;
                     border-radius: 0.5rem;
                     padding: 0.5rem 1.5rem;
@@ -125,7 +116,7 @@ $shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
                     transition: background-color 0.2s, transform 0.1s;
 
                     &:hover {
-                        background-color: $hover-accent;
+                        background-color: var(--hover-accent);
                         transform: translateY(-2px);
                     }
 

@@ -1,3 +1,22 @@
-*{
-    background-color: #353831;
+body{
+    --bg: #2b2b2a;
+    --bg-primary: #353831;
+    --bg-secondary: #38423b;
+    --bg-tertiary: #3f5e5a;
+    --accent: #20fc8f;
+    --hover-accent: #a4c3b2;
+    --text: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
+    background-color: var(--bg-primary);
+
+    &.dark{
+        --bg: #6B9080;
+        --bg-primary: #CCE3DE;
+        --bg-secondary: #A4C3B2;
+        --bg-tertiary: #CCE3DE;
+        --accent: #EAF4F4;
+        --hover-accent: #a4c3b2;
+        --text: #2d2d2a;
+        --shadow: rgba(0, 0, 0, 0.3) 10px 4px 8px;
+    }
 }

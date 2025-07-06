@@ -10,14 +10,14 @@ body{
     align-items: center;
     justify-content: center;
     height: 60px;
-    background-color: #2D2D2A;
+    background-color: var(--bg);
     color: white;
     margin: -10px;
     &-logo{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #2D2D2A;
+        background-color: var(--bg);
         
     }
     &-logo-img{
@@ -32,5 +32,5 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     margin: 10px;
-    background-color: #2D2D2A;
+    background-color: var(--bg);
 }
