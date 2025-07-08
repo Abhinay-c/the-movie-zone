@@ -15,14 +15,12 @@ export class Navbar implements OnInit{
   ngOnInit(): void {}
 
   toggleTheme() {
-    if(!this.isDark){
-      if(!document.body.classList.contains('dark')) {
-        document.body.classList.add('dark');
-      }
-    } else{
-      if(document.body.classList.contains('dark')) {
-        document.body.classList.remove('dark');
-      }
+    this.isDark = !this.isDark;
+    if(this.isDark)  {
+      document.body.classList.add('dark');
+    }
+    else{
+      document.body.classList.remove('dark');
     }
   }
 }

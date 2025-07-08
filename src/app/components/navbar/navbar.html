@@ -4,16 +4,11 @@
     </div>
     <div class="navbar-toggle">
         <div class="navbar-toggle-switch">
-            <ui-switch 
-                [(ngModel)]="isDark" 
-                (change)="toggleTheme()"
-                [size]="'small'" 
-                [color]="'#20FC8F'" 
-                [switchColor]="'#ffffff'"
-                [checked]="false"
+            <button
+                (click)="toggleTheme()"
             >
-            Theme
-            </ui-switch>
+                Change Theme
+            </button>
         </div>
     </div>
 </div>
