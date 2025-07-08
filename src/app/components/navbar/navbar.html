@@ -3,8 +3,9 @@
         <p class="text">The Movie Zone</p>
     </div>
     <div class="navbar-toggle">
+        <a href="/">Home</a>
         <div class="navbar-toggle-switch">
-            <input type="checkbox" (click)="toggleTheme()" id="darkmode-toggle" />
+            <input type="checkbox" [(ngModel)]="isDark" (click)="toggleTheme()" id="darkmode-toggle" />
             <label for="darkmode-toggle">
                 <svg class="moon" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
