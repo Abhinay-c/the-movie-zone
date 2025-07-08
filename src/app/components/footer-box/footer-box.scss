@@ -11,8 +11,33 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
+        padding-left: 10vw;
+        overflow: hidden;
+        &-address{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-email{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        svg{
+            width: 1.5rem;
+            background-color: var(--bg-tertiary);
+            padding: 0.2rem;
+            border-radius: 0.5rem;
+            margin-right: 1rem;
+        }
+        svg:hover{
+            background-color: #ffffff;
+            transform: scale(1.2);
+            border-radius: 0.2rem;
+        }
+
     }
 
     &-social{
@@ -27,11 +52,30 @@
         &-links{
             display: flex;
             align-items: center;
-            justify-content:space-between;
+            justify-content: flex-start;
             flex-direction: row;
             width: 100%;
-
-
+            margin-top:1rem;
         }
+        a{
+            margin-right: 2rem;
+        }
+        svg{
+            width: 1.5rem;
+            background-color: var(--bg-tertiary);
+            padding: 0.2rem;
+            border-radius: 0.5rem;
+        }
+        svg:hover{
+            background-color: #ffffff;
+            transform: scale(1.2);
+            border-radius: 0.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-box{
+        flex-direction: column;
     }
 }
